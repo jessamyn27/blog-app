@@ -1,35 +1,24 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
-<body>
-  <header>
-    <h1>Show Page for <%=article.name%></h1>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/articles">Article Index</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <h2>Article Attributes</h2>
-      <ul>
-        <li>Name: <%=article.name%></li>
-      </ul>
-    </section>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <h1>Create a New Article</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/articles">Articles Index</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <section>
-      <a href="/articles/<%=article.id%>/edit">Edit</a>
-    </section>
-
-    <section>
-      <form action="/articles/<%=article.id%>?_method=DELETE" method="POST">
-        <button type="submit">Delete Article</button>
-      </form>
-    </section>
-  </main>
-</body>
+    <main>
+      <form action="/articles" method="POST">
+        <input type="text" name="name">
+        <button type="submit">Submit</button>
+      </main>
+  </body>
 </html>
