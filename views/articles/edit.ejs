@@ -1,0 +1,24 @@
+!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <header>
+    <h1>Edit<%=article.name%></h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/articles">Articles Index</a></li>
+      </ul>
+    </nav>
+  </header><!-- /header -->
+  <main>
+    <h2>Article attributes</h2>
+    <form action="/articles/<%=article.id%>?_method=PUT" method="POST">
+      <input type="text" name="name" value="<%=article.name%>"><br>
+      <button type="submit">Update Article</button>
+    </form>
+  </main>
+</body>
+</html>

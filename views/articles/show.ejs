@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <h1><%=article.name%>'s Page</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/articles">Articles Index</a></li>
+
+        </ul>
+      </nav>
+    </header>
+
+<main>
+  <section>
+    <h2>Article Attributes</h2>
+    <ul>
+      <li>Name: <%=article.name%></li>
+      <section>
+        <a href="/articles/<%=article.id%>/edit">Edit</a>
+      </section>
+    </ul>
+    <form  action="/articles/<%=article.id%>?_method=DELETE" method="POST">
+<button type="submit">delete article</button>
+</form>
+  </section>
+</main>
+
+
+  </body>
+</html>
