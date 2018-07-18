@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 
 const articleSchema = mongoose.Schema({
-  name: String
+  title: String,
+  body: String
 });
 
-module.exports = mongoose.model('Article', articleSchema);
+const Article = mongoose.model('Article', articleSchema);
+
+module.exports = Article;
